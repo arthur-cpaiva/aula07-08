@@ -1,23 +1,20 @@
 <?php
 
-if (isset ($_POST['capital']) && isset($_POST['juros']) && isset($_POST['tempo'])) {
+if (isset($_POST['capital']) && isset($_POST['juros']) && isset($_POST['tempo'])) {
 
-$capital = $_POST['capital'];
-$juros = $_POST['juros'];
-$tempo = $_POST['tempo'];
-$jurosSimples = $capital * ($juros/100) * $tempo;
-$montante = $capital + $jurosSimples;
+    $capital = $_POST['capital'];
+    $juros = $_POST['juros'];
+    $tempo = $_POST['tempo'];
+    $jurosSimples = $capital * ($juros / 100) * $tempo;
+    $montante = $capital + $jurosSimples;
 
-echo "Juros Simples: R$".$jurosSimples;
-echo '<br>';
-echo "Montante: R$".$montante;
-
-
-
-
-
+    echo "<div class='resultado'>";
+    echo "<p>Juros Simples: R$" . $jurosSimples . "<p>";
+    echo '<br>';
+    echo "<p>Montante: R$" . $montante . "<p>";
 }
 
+echo "</div>";
 
 ?>
 
@@ -27,11 +24,12 @@ echo "Montante: R$".$montante;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porcentagem</title>
+    <title>Aplicação</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <h1>Investimento</h1>
     <form action="" method="post">
         <label>Capital</label>
         <input type="text" name="capital">

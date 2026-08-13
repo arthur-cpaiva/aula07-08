@@ -6,10 +6,11 @@ if (isset($_POST['nota1']) && isset($_POST['nota2']) && isset($_POST['nota3'])) 
     $nota3 = $_POST['nota3'];
     $resultadoMedia = ($nota1 + $nota2 + $nota3) / 3;
 
-    echo "A média é: " .$resultadoMedia;
+    echo "<div class='resultado'>";
+    echo "A média é: " . $resultadoMedia;
 }
 
-
+echo "</div>";
 
 ?>
 
@@ -20,9 +21,12 @@ if (isset($_POST['nota1']) && isset($_POST['nota2']) && isset($_POST['nota3'])) 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Aritmetica</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <h1>Notas escolares</h1>
 
     <form action="" method="post">
         <label>Nota 1</label>

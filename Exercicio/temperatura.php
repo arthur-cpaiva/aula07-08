@@ -4,10 +4,10 @@ if (isset($_POST['celsius'])) {
     $calculo = 1.8;
 
     $resultado = ($celsius * 1.8) + 32;
-
-    echo "A conversão ficou em: " . $resultado . "ºF";
+    echo "<div class='resultado'>";
+    echo "<p> A conversão ficou em: " . $resultado . "ºF" . "<p>";
 }
-
+echo "</div>"
 
 
 
@@ -18,11 +18,12 @@ if (isset($_POST['celsius'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cicrculo</title>
+    <title>Temperatura</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <h1>Temperatura</h1>
     <form action="" method="post">
         <label>Celsius</label>
         <input type="text" name="celsius">

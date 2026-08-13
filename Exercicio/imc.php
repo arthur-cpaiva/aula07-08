@@ -1,37 +1,43 @@
 <?php
-if (isset($_POST['base']) && isset($_POST['altura'])) {
 
-    $base = $_POST['base'];
+if (isset($_POST['altura']) && isset($_POST['peso'])) {
+
     $altura = $_POST['altura'];
-    $resultadoArea = $base * $altura;
+    $peso = $_POST['peso'];
+    $calculo = $peso / ($altura * $altura);
 
     echo "<div class='resultado'>";
-    echo "<p>Área: " . $resultadoArea . "m2" . "</p>";
+    echo "<p> Seu IMC é de: " . $calculo . "<p>";
 }
 
 echo "</div>";
-
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retangulo</title>
+    <title>IMC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Retangulo</h1>
+    <h1>Cálculo IMC</h1>
 
     <form action="" method="post">
-        <label>Base</label>
-        <input type="text" name="base">
         <label>Altura</label>
-        <input type="text" name="altura">
+        <input type="text" name="altura" R$>
+        <label>Peso</label>
+        <input type="text" name="peso">
         <button type="submit">Calcular</button>
+
+
+
+
+
     </form>
 
 
